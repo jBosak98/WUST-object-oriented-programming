@@ -1,0 +1,62 @@
+#ifndef MONTH_H
+#define MONTH_H
+
+#define NR_OF_DAYS_IN_YEAR 365
+#define NR_OF_DAYS_IN_LEAP_YEAR 366
+
+#define NR_OF_MONTHS_IN_YEAR 12
+#define MAX_MONTH 12
+#define MIN_MONTH 1
+#define MIN_DAY 1
+
+
+#define MONTH_NR_JAN 1
+#define MONTH_NR_FEB 2
+#define MONTH_NR_MAR 3
+#define MONTH_NR_APR 4
+#define MONTH_NR_MAY 5
+#define MONTH_NR_JUN 6
+#define MONTH_NR_JUL 7
+#define MONTH_NR_AUG 8
+#define MONTH_NR_SEP 9
+#define MONTH_NR_OCT 10
+#define MONTH_NR_NOV 11
+#define MONTH_NR_DEC 12
+
+#define NR_OF_DAYS_JAN 31
+#define NR_OF_DAYS_FEB 28
+#define NR_OF_DAYS_LEAP_FEB 29
+#define NR_OF_DAYS_MAR 31
+#define NR_OF_DAYS_APR 30
+#define NR_OF_DAYS_MAY 31
+#define NR_OF_DAYS_JUN 30
+#define NR_OF_DAYS_JUL 31
+#define NR_OF_DAYS_AUG 31
+#define NR_OF_DAYS_SEP 30
+#define NR_OF_DAYS_OCT 31
+#define NR_OF_DAYS_NOV 30
+#define NR_OF_DAYS_DEC 31
+
+
+#define LEAP_PERIOD 400
+#define NR_OF_LEAP_IN_PERIOD 97
+
+
+#define LEAP_PERIOD_STAGE_1 4
+#define LEAP_PERIOD_STAGE_2 100
+#define LEAP_PERIOD_STAGE_3 400
+
+
+#define NR_OF_HOURS_IN_DAY 24
+#define NR_OF_MINUTES_IN_HOUR 60
+#define NR_OF_SECONDS_IN_MINUTE 60
+
+
+#define MAX_HOUR 23
+#define MIN_HOUR 0
+#define MAX_MINUTE 59
+#define MIN_MINUTE 0
+#define MAX_SECOND 59
+#define MIN_SECOND 0
+
+#endif
