@@ -60,6 +60,6 @@ std::istream &operator>>(std::istream &in, Time &t){
     int hour = stringToInt(h);
     int minute = stringToInt(min);
     int second = stringToInt(s);
-    new (&t) Time(year,month,day,hour,minute,second);
+    t = Time(year,month,day,hour,minute,second);
     return in;
 }
