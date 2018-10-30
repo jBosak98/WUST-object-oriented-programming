@@ -1,8 +1,9 @@
 #include "time.h"
+#include <iostream>
 
 
 Time::Time(int year, int month, int day, int hour, int minute, int second) : Date(year, month, day) {
- 	if (hour > MAX_HOUR) hour = MAX_HOUR;
+    if (hour > MAX_HOUR) hour = MAX_HOUR;
     else if (hour < MIN_HOUR) hour = MIN_HOUR;
     seconds += hrToSec(hour);
     if (minute > MAX_MINUTE) minute = MAX_MINUTE;
@@ -46,14 +47,19 @@ std::ostream &operator<<(std::ostream &out, Time &t){
 }
 
 std::istream &operator>>(std::istream &in, Time &t){
-    int year = 0;
-    int month = 0;
-    int day = 0;
-    int hour = 0;
-    int minute = 0;
-    int second = 0;
-    in>>year>>month>>day>>hour>>minute>>second;
+    std::string y;
+    std::string m;
+    std::string d;
+    std::string h;
+    std::string min;
+    std::string s;
+    in>>y>>m>>d>>h>>min>>s;
+    int year = stringToInt(y);
+    int month = stringToInt(m);
+    int day = stringToInt(d);
+    int hour = stringToInt(h);
+    int minute = stringToInt(min);
+    int second = stringToInt(s);
     new (&t) Time(year,month,day,hour,minute,second);
     return in;
-
 }

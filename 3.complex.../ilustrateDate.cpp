@@ -3,14 +3,17 @@
 
 Date getDateFromSTD(){
 	std::cout<<"WRITE THE DATE, EG. \n 2018 10 26\n";
-	int day = 0;
-	int month = 0;
-	int year = 0;
-	std::cin>>year;
-	std::cin>>month;
-	std::cin>>day;
+	std::string d;
+	std::string m;
+	std::string y;
+    std::cin>>y>>m>>d;
+
+	int day = stringToInt(d);
+	int month = stringToInt(m);
+	int year = stringToInt(y); 
 	return Date(year,month,day);
 }
+
 
 void compare(Date d1, Date d2){
 	if (d1 == d2){

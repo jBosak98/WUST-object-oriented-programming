@@ -4,6 +4,12 @@
 void startTestTime() {
 
     testTime();
+    Time t1(2018,10,31,100,100,100);
+    assert(t1 == Time(2018,10,31,23,59,59));
+    t1.addSeconds(2);
+    assert(t1 == Time(2018,11,1,0,0,1));
+    assert(t1 != Time(2018,11,1,0,0,0));
+
 }
 
 void testTime() {

@@ -7,6 +7,8 @@
 
 #include "../Date/date.h"
 
+#include "../Date/toolsDate.h"
+
 class Time : public Date {
 public:
 	Time(){}
@@ -30,6 +32,7 @@ public:
 	friend std::ostream &operator<<(std::ostream &out, Time &t);
 
 	friend std::istream &operator>>(std::istream &in, Time &t);
+
 
 };
 

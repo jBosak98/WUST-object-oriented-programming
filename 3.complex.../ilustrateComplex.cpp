@@ -12,6 +12,10 @@ void startComplex(){
 	std::cout<<"WRITE SECOND COMPLEX NUMBER\n";
 	std::cin>>c2;
 	std::cout<<c2;
+	if(input == "/" && c2.imaginary == 0 && c2.real == 0){
+		std::cout<<"DIVISION BY 0 is impossible, 1 IS INSERTED";
+		c2.real = 1; 
+	}
 	Complex result;
 	std::cout<<"\n\n"<<c1;
 	if(input == "*"){

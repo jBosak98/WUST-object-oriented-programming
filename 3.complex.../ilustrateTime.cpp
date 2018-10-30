@@ -3,9 +3,6 @@
 
 Time getTimeFromSTD(){
 	std::cout<<"WRITE THE TIME, EG. \n 2018 10 26\n";
-	int day = 0;
-	int month = 0;
-	int year = 0;
 	Time t;
 	std::cin>>t;
 	std::cout<<t;

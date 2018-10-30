@@ -1,5 +1,6 @@
 #include "complex.h"
-#include <cmath>
+
+
 
 Complex::Complex(float real, float imaginary){
 	this->real = real;
@@ -21,6 +22,9 @@ Complex	Complex::operator*(Complex c){
 }
 
 Complex	Complex::operator/(Complex c){
+	if(c.imaginary == 0 && c.real == 0){
+		c.real = 1;
+	}
 	float r = (this->real * c.real + this->imaginary * c.imaginary)/(c.imaginary * c.imaginary + c.real * c.real);
 	float i = (this->imaginary * c.real - this->real * c.imaginary)/(c.imaginary * c.imaginary + c.real * c.real);
 	return Complex(r,i);
@@ -51,10 +55,22 @@ std::ostream &operator<<(std::ostream &out, Complex &c){
 }
 
 std::istream &operator>>(std::istream &in, Complex &c){
-    int real = 0;
-    int imaginary = 0;
-    in>>real>>imaginary;
-    new (&c) Complex(real,imaginary);
+    float real = getFloatfromSTD();
+    float imaginary = getFloatfromSTD();
+    c.real = real;
+    c.imaginary = imaginary;
     return in;
 
+}
+
+float getFloatfromSTD(){
+	float ret = 0;
+	std::string s;
+	std::cin>>s;
+	std::istringstream ss(s);
+    if(!(ss>>ret)){
+    	std::cout<<"WRONG INPUT, 0 IS INSERTED\n";
+    	ret = 0;
+    }
+    return ret;
 }

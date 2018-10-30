@@ -1,4 +1,5 @@
 #include "date.h"
+#include <iostream>
 
  Date::Date(long seconds){
     this->seconds = seconds;

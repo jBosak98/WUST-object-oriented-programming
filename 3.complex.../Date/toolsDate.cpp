@@ -20,3 +20,13 @@ int getNrOfLeapYears(int year) {
     return (abs(year - 1) / LEAP_PERIOD_STAGE_1 - abs(year - 1) / LEAP_PERIOD_STAGE_2 +
             abs(year - 1) / LEAP_PERIOD_STAGE_3);
 }
+
+int stringToInt(std::string s){
+	int ret = 0;
+	std::istringstream ss(s);
+    if(!(ss>>ret)){
+    	std::cout<<"WRONG INPUT, 1 IS INSERTED\n";
+    	ret = 1;
+    }
+    return ret;
+}

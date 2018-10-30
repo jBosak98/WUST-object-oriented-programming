@@ -2,6 +2,11 @@
 #define COMPLEX_H
 
 #include <iostream>
+#include <istream>
+#include <cmath>
+#include <string>
+#include <cstdlib>
+#include <sstream>
 
 class Complex{
 public:
@@ -21,6 +26,7 @@ public:
 
 	bool operator!=(Complex c);
 
+	
 	friend std::ostream &operator<<(std::ostream &out, Complex &c);
 
 	friend std::istream &operator>>(std::istream &in, Complex &c);
@@ -29,11 +35,13 @@ public:
 
 	float getImaginaryPart();
 
-protected:
+
 	float real = 0;
 	float imaginary = 0;
+protected:
 private:
 
 };
+	float getFloatfromSTD();
 
 #endif
