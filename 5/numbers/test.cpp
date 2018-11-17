@@ -34,7 +34,7 @@ void testRomanOnebyOne(){
 	RomanNumber r3 = RomanNumber(3);
 	assert(r3.getValue() == "III");
 	RomanNumber r4 = RomanNumber(4);
-	r4.show();
+	// r4.show();
 	assert(r4.getValue() == "IV");
 	RomanNumber r5 = RomanNumber(5);
 	assert(r5.getValue() == "V");

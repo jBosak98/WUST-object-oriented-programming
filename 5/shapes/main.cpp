@@ -9,16 +9,16 @@ void showRectangle(Rectangle rec){
 	std::cout<<"\nDiagonal of base:\t"<<rec.getBaseDiagonal();
 }
 void organizeValues(float *a, float *b, float *c){
-	if(*a == 0 && *b != 0 && *c != 0){
-		std::cout<<"XD";
+	if(*a <= 0 && *b > 0 && *c > 0){
 		*a = *c;
 		*c = 0;
 	}
-	if(*b == 0 && *a != 0 && *c != 0){
+	if(*b <= 0 && *a > 0 && *c > 0){
 		*b = *c;
 		*c = 0;
 	}
 }
+
 int
 main(){
 	startTest();
