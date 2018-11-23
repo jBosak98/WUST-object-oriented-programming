@@ -15,3 +15,11 @@
 		this->productionYear = productionYear;
 		this->capacity = capacity;
 	}
+
+	AmphibiousCar::AmphibiousCar(Car car, int productionYear, int capacity) : 
+		Car(car.getEngine(), car.getWeight(), car.getNumberOfSeats(), car.getColor(), car.getNumberOfDoors(), car.getBrand()),
+		Boat(car.getEngine(),car.getWeight(),car.getNumberOfSeats(),car.getColor(),productionYear,capacity){
+
+		this->productionYear = productionYear;
+		this->capacity = capacity;
+	}

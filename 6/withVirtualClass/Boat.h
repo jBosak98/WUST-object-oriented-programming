@@ -14,7 +14,6 @@ public:
 
 	int getCapacity();
 	
-	void show();
 
 protected:
 	int productionYear;

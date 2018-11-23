@@ -16,8 +16,6 @@ public:
 		std::string brand,
 		int numberOfDoors
 		);
-
-	void show();
 };
 
 #endif

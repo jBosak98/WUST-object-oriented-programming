@@ -16,6 +16,8 @@ public:
 		std::string brand,
 		int numberOfDoors
 		);
+
+	AmphibiousCar(Car car, int productionYear, int capacity);
 };
 
 #endif

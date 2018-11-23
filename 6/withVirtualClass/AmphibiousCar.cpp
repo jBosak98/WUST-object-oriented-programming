@@ -20,7 +20,3 @@
 		this->numberOfSeats = numberOfSeats;
 		this->color = color;
 	}
-
-	void AmphibiousCar::show(){
-
-	}

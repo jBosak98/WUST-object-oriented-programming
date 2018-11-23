@@ -21,11 +21,3 @@
 	std::string Car::getBrand(){
 		return brand;
 	}
-	void Car::show(){
-		std::cout<<"\n"<<"CAR:	";
-		std::cout<<color<<" "<<brand<<"\n";
-		std::cout<<"engine: "<<engine<<"\n";
-		std::cout<<"weight: "<<weight<<"\n";
-		std::cout<<"numberOfDoors: "<<numberOfDoors<<"\n";
-		std::cout<<"numberOfSeats: "<<numberOfSeats<<"\n\n";
-	}

@@ -55,8 +55,5 @@ int SparseVector::scalarProduct(SparseVector *secondVector){
 }
 
 bool SparseVector::valueExist(int orderVector, int i){
-	if(orderVector% ((int) pow(2, i + 1)) >= pow(2,i)){
-		return true;
-	}
-	return false;
+	return orderVector% ((int) pow(2, i + 1)) >= pow(2, i);
 }

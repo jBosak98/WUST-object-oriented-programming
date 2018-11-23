@@ -5,7 +5,7 @@
 #include "AmphibiousCar.h"
 
 
-Car* createCar(){
+AmphibiousCar* createAmpCar(){
 	std::cout<<"WRITE THE BRAND"<<"\n";
 	std::string brand;
 	std::cin>>brand;
@@ -26,34 +26,19 @@ Car* createCar(){
 	std::cout<<"WRITE THE NUMBER OF DOORS"<<"\n";
 	int numberOfDoors;
 	std::cin>>numberOfDoors;
-	return new Car(engine,weight,numberOfSeats,col, numberOfDoors, brand);
-}
 
-void testBoat(){
-	Boat b = Boat(1.7, 250, 60, "white", 2007, 300);
-	b.show();
-}
-
-void testAmphibiousCar(){
-
+	int year = 0;
+	int capacity = 0;
+	std::cout<<"WRITE THE YEAR OF PRODUCTION"<<"\n";
+	std::cin>>year;
+	std::cout<<"WRITE THE CAPACITY"<<"\n";
+	std::cin>>capacity;
+	return new AmphibiousCar(engine, weight,numberOfSeats,col,year,capacity,brand,numberOfDoors);
 }
 		
 int
 main(){
-	std::string typeOfVehicle;
-	// std::cout<<"BUS OR CAR?"<<"\n";
-	// std::cin>>typeOfVehicle;
-
-	Boat b = Boat(1.7, 250, 60, "white", 2007, 300);
-	b.show();
-
-
-	AmphibiousCar ampCar = AmphibiousCar(2,150,5,"red",2018,30,"VOLVO",4);
-	ampCar.Car::show();
-	ampCar.Boat::show();
-	// if(typeOfVehicle == "CAR"){
-	// 	Car *c = createCar();
-	// 	c->show();
-	// }
+	AmphibiousCar *ampCar = createAmpCar();
+	ampCar->show();
 }
 

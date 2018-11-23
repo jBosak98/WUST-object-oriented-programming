@@ -13,9 +13,10 @@ public:
 
 	int scalarProduct(SparseVector *secondVector);
 	
-	int orderVector;
+	int orderVector;//up to 31 elements
 
 	VectorElement *head;
+
 
 private:
 

@@ -5,7 +5,6 @@
 void startTest(){
 	testConstructor();
 	testScalarProduct();
-
 	std::cout<<"WELL DONE"<<"\n";
 }
 
@@ -80,5 +79,9 @@ void testScalarProduct(){
 	SparseVector v22 = SparseVector("0 0 3 4 0");
 	SparseVector v23 = SparseVector("0 0 0 7 11");
 	assert(v22.scalarProduct(&v23) == 28);
+
+	SparseVector v24 = SparseVector("0 0 a 4 0");
+	SparseVector v25 = SparseVector("0 0 0 7 11");
+	assert(v24.scalarProduct(&v25) == 0);
 
 }

@@ -14,10 +14,9 @@ public:
 		);
 	int getNumberOfDoors();
 	std::string getBrand();
-	void show();
-private:
 	std::string brand;
 	int numberOfDoors;
+private:
 
 
 };
